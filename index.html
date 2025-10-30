@@ -250,7 +250,7 @@
 
             sorted.forEach(p => {
                 if (currentTime < p.arrival) {
-                    gantt.push({ name: 'Idle', start: currentTime, end: p.arrival, color: '#ffffff', isIdle: true });
+                    gantt.push({ name: 'Wait', start: currentTime, end: p.arrival, color: '#ffffff', isIdle: true });
                     currentTime = p.arrival;
                 }
                 gantt.push({ name: p.name, start: currentTime, end: currentTime + p.burst, color: p.color });
@@ -273,7 +273,7 @@
                     const future = proc.filter(p => p.remaining > 0);
                     if (future.length === 0) break;
                     const nextArrival = Math.min(...future.map(p => p.arrival));
-                    gantt.push({ name: 'Idle', start: currentTime, end: nextArrival, color: '#ffffff', isIdle: true });
+                    gantt.push({ name: 'Wait', start: currentTime, end: nextArrival, color: '#ffffff', isIdle: true });
                     currentTime = nextArrival;
                     continue; 
                 }
@@ -302,7 +302,7 @@
                     const future = proc.filter(p => p.remaining > 0);
                     if (future.length === 0) break;
                     const nextArrival = Math.min(...future.map(p => p.arrival));
-                    gantt.push({ name: 'Idle', start: currentTime, end: nextArrival, color: '#ffffff', isIdle: true });
+                    gantt.push({ name: 'Wait', start: currentTime, end: nextArrival, color: '#ffffff', isIdle: true });
                     currentTime = nextArrival;
                     continue; 
                 }
@@ -335,7 +335,7 @@
                 if (queue.length === 0) {
                     if (processIndex < proc.length) {
                         const nextArrival = proc[processIndex].arrival;
-                        gantt.push({ name: 'Idle', start: currentTime, end: nextArrival, color: '#ffffff', isIdle: true });
+                        gantt.push({ name: 'Wait', start: currentTime, end: nextArrival, color: '#ffffff', isIdle: true });
                         currentTime = nextArrival;
                         continue;
                     } else {
@@ -419,7 +419,7 @@
                     let nextLow = futureLow.length > 0 ? Math.min(...futureLow.map(p => p.arrival)) : Infinity;
                     let nextArrival = Math.min(nextHigh, nextLow);
 
-                    gantt.push({ name: 'Idle', start: currentTime, end: nextArrival, color: '#ffffff', isIdle: true });
+                    gantt.push({ name: 'Wait', start: currentTime, end: nextArrival, color: '#ffffff', isIdle: true });
                     currentTime = nextArrival;
                 } else {
                     break;
@@ -621,6 +621,7 @@
     </script>
 </body>
 </html>
+
 
 
 
