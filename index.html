@@ -10,16 +10,7 @@
     <div class="container">
         <h1>CPU Scheduling Algorithm Comparision</h1>
 
-        <div class="input-section">
-            <div class="controls-container">
-                <div id="quantumInput">
-                    <label>Quantum:</label>
-                    <input type="number" id="quantum" value="3" min="1">
-                </div>
-                <div id="mlqInfo">
-                    <span></span>
-                </div>
-            </div>
+        
 
             <table id="processTable">
                 <thead>
@@ -41,7 +32,18 @@
                     </tr>
                 </tbody>
             </table>
-
+        
+        <div class="input-section">
+            <div class="controls-container">
+                <div id="quantumInput">
+                    <label>Quantum:</label>
+                    <input type="number" id="quantum" value="3" min="1">
+                </div>
+                <div id="mlqInfo">
+                    <span></span>
+                </div>
+            </div>
+            
             <div class="button-group">
                 <button class="btn-add" onclick="addProcess()">Add Process</button>
                 <button class="btn-run" onclick="runScheduling()">Start</button>
@@ -621,6 +623,7 @@
     </script>
 </body>
 </html>
+
 
 
 
