@@ -497,7 +497,7 @@
                 <td><input type="number" class="arrival" value="0" min="0"></td>
                 <td><input type="number" class="burst" value="5" min="1"></td>
                 <td class="priority-cell"><input type="number" class="priority" value="${processCount}" min="1"></td>
-                <td><button onclick="removeRow(this)" class="btn-reset" style="padding: 0.5rem 1rem;">Xóa</button></td>
+                <td><button onclick="removeRow(this)" class="btn-reset" style="padding: 0.5rem 1rem;">Remove</button></td>
             `;
             tbody.appendChild(row);
         }
@@ -515,7 +515,7 @@
                     <td><input type="number" class="arrival" value="0" min="0"></td>
                     <td><input type="number" class="burst" value="5" min="1"></td>
                     <td class="priority-cell"><input type="number" class="priority" value="1" min="1"></td>
-                    <td><button onclick="removeRow(this)" class="btn-reset" style="padding: 0.5rem 1rem;">Xóa</button></td>
+                    <td><button onclick="removeRow(this)" class="btn-reset" style="padding: 0.5rem 1rem;">Remove</button></td>
                 </tr>
             `;
             processCount = 1;
@@ -924,5 +924,6 @@
     </script>
 </body>
 </html>
+
 
 
