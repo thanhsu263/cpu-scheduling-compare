@@ -1,12 +1,58 @@
-body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 1rem;
-        }
 
-        @media (max-width: 768px) {
-            body {
-                padding: 0.5rem;
-            }
-        }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    .container {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .controls-container {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    table {
+        font-size: 0.875rem;
+    }
+    
+    th, td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.75rem;
+    }
+    
+    td input {
+        padding: 0.4rem 0.2rem;
+        font-size: 0.875rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    button {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+        width: 100%;
+    }
+    
+    .summary {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .process-colors {
+        gap: 0.5rem;
+        font-size: 0.875rem;
+    }
+}
