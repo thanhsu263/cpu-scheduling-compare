@@ -320,7 +320,6 @@
                     <input type="number" id="quantum" value="3" min="1">
                 </div>
                 <div id="mlqInfo">
-                    <label>MLQ:</label>
                     <span></span>
                 </div>
             </div>
@@ -341,7 +340,7 @@
                         <td><input type="number" class="arrival" value="0" min="0"></td>
                         <td><input type="number" class="burst" value="5" min="1"></td>
                         <td class="priority-cell"><input type="number" class="priority" value="1" min="1"></td>
-                        <td><button onclick="removeRow(this)" class="btn-reset" style="padding: 0.5rem 1rem;">Xóa</button></td>
+                        <td><button onclick="removeRow(this)" class="btn-reset" style="padding: 0.5rem 1rem;">Remove</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -910,7 +909,7 @@
 
         function renderProcessColors(processes) {
             const container = document.getElementById('processColors');
-            container.innerHTML = '<strong>Màu sắc tiến trình:</strong>';
+            container.innerHTML = '<strong>Process color:</strong>';
             
             processes.forEach(p => {
                 const item = document.createElement('div');
@@ -925,4 +924,5 @@
     </script>
 </body>
 </html>
+
 
